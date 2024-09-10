@@ -1,0 +1,17 @@
+
+astcall2 key=$SESSION_ID +
+     rawimg=$Aster_sourceFile +
+     outimg=$Aster_outimg +
+     nah=$Aster_NAH nav=$Aster_NAV rtype=$RTYPE +
+     dted=$Aster_coregElevInputImage +
+     lsat=$Aster_coregBaseInputImage +
+     maptype=$Aster_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $refimg +
+     $tiePoints +
+     usermapref=\"${Aster_referenceProjection}\" +
+     interp=$Aster_resampleMethod +
+     rastype=$Aster_rasterType +
+     siteref=\"${Aster_siteref}\" +
+     siteout=\"${Aster_siteout}\" +
+     $aoiLimits

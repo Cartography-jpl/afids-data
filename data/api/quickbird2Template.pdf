@@ -1,0 +1,10 @@
+
+ikqbwarpad2 key=$SESSION_ID +
+     rawimg=$Quickbird2_sourceFile +
+     rawmeta="${Quickbird2_metadataFile}" +
+     fnamein=$Quickbird2_previousCoregImage +
+     outimg=${Quickbird2_outimg}_b${thisBand} +
+     senstype=q rawtype=$Quickbird2_rawtype +
+     zoomfac=4.0 band=${Quickbird_band} nitfbands=${Quickbird_nband} +
+     rawhdr=""
+

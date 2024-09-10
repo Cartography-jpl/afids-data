@@ -1,0 +1,6 @@
+ikqbwarpad2 key=xxx +
+     fnamein=$fnamein +
+     rawimg=$rawimg +
+     rawmeta="" +
+     senstype=q rawtype=nitf nitfband=8 band=$band +
+     outimg=$outimg

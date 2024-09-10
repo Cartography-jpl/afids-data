@@ -1,0 +1,20 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+astwarpad2 key=$SESSION_ID +
+   rawaster=$Aster2_sourceFile +
+   fnamein=$Aster2_previousCoregImage +
+   outimg=$Aster2_outimg +
+   band=$Aster_band btype=$btype
+
+end-proc
+
+

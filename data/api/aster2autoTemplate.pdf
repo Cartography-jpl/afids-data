@@ -1,0 +1,7 @@
+
+astwarpad2 key=$SESSION_ID +
+   rawaster=$Aster2_sourceFile +
+   fnamein=$Aster2_previousCoregImage +
+   outimg=$Aster2_outimg +
+   band=$Aster_band btype=$btype
+

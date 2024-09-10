@@ -1,0 +1,32 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+ikqbcall2 key=$SESSION_ID +
+     rawimg=$NTM_sourceFile +
+     rawhdr="" +
+     outimg=$NTM_outimg +
+     nah=$NTM_NAH nav=$NTM_NAV rtype=$RTYPE +
+     dted=$NTM_coregElevInputImage +
+     base=$coregBaseInputImage rawtype=nitf senstype=n +
+     mpix=$NTM_MPIX mpixf=$NTM_MPIXF +
+     maptype=$NTM_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $outrpc +
+     $refimg +
+     $controlPointLongLat +
+     $bfes +
+     $tiePoints +
+     usermapref=\"${NTM_referenceProjection}\" +
+     interp=$NTM_resampleMethod +
+     rastype=$NTM_rasterType +
+     $aoiLimits
+
+end-proc

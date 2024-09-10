@@ -1,0 +1,31 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+modcall2 key=$SESSION_ID +
+     rawimg1=$Modis_sourceFile +
+     rawgeo1=$Modis_metadataFile +
+     $rawimg2 +
+     $rawgeo2 +
+     outimg=$Modis_outimg +
+     nah=$Modis_NAH nav=$Modis_NAV rtype=$Modis_RTYPE +
+     dted=$Modis_coregElevInputImage +
+     maptype=$Modis_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $refimg +
+     usermapref=\"${Modis_referenceProjection}\" +
+     interp=$Modis_resampleMethod +
+     rastype=$Modis_rasterType +
+     siteref=\"${Modis_siteref}\" +
+     siteout=\"${Modis_siteout}\" +
+     $aoiLimits
+
+end-proc
+

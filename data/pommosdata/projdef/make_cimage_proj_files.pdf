@@ -1,0 +1,19 @@
+!Make vicar-compatible map-projection blanks.
+!Note that pixel scale gets re-defined by rsm_project parms.
+!Default (0.000101223629164)= 6m(mars); 3m(moon); 10.9m(earth) 
+procedure
+parm  mproj   string  def="mars_geographic.prj"
+parm  outname string  def="mars_proj_latlon.vic"
+body
+
+let mproj="/bigdata/tllogan30/marsmos/mars/projdef/&mproj"
+gen        out=xxa nl=1 ns=1 ival=0 'byte  
+gtgen      out=xxa +
+ geotiff=("ModelPixelScaleTag=(0.000101223629164,0.000101223629164,0)", +
+          "ModelTiepointTag=(0,0,0,0,0,0)")
+ush gdalwarp  -t_srs &mproj -r bilinear xxa -of VICAR -overwrite xxb
+ush gdal_translate -of VICAR -mo AREA_OR_POINT=Point xxb xxc
+gtgenup    xxc geotiff=("MODELTIEPOINTTAG=(0,0,0,0,0,0)")
+gtcopy     xxc &outname
+label-l    &outname
+end-proc

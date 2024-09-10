@@ -1,0 +1,14 @@
+if [ -z "$AFIDSDATATOP" ] ; then
+    export AFIDSDATATOP=@prefix@/data
+fi
+export AFIDS_DATA=${AFIDSDATATOP}
+export LANDSAT_ROOT=${AFIDS_DATA}/landsat 
+export ELEV_ROOT=${AFIDS_DATA}/srtmL2_filled 
+export CIB1_ROOT=${AFIDS_DATA}/cib1 
+export CIB5_ROOT=${AFIDS_DATA}/cib5
+export SPICEDATA=${AFIDS_DATA}/cspice 
+export MARS_KERNEL=${AFIDS_DATA}/mars_kernel
+export AFIDS_VDEV_DATA=${AFIDS_DATA}/vdev
+export AFIDS_PLANET_DEM=${AFIDS_DATA}/pommosdata/planet_dem
+export AFIDS_PROJDEF=${AFIDS_DATA}/pommosdata/projdef
+export POMM_TESTCASE=${AFIDS_DATA}/pommosdata/testcases

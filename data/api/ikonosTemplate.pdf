@@ -1,0 +1,33 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+ikqbcall2 key=$SESSION_ID +
+     rawimg=$Ikonos_sourceFile +
+     rawmeta="${Ikonos_metadataFile}" +
+     rawhdr=$Ikonos_headerFile +
+     outimg=$Ikonos_outimg +
+     nah=$Ikonos_NAH nav=$Ikonos_NAV rtype=$RTYPE +
+     dted=$Ikonos_coregElevInputImage +
+     base=$coregBaseInputImage rawtype=$Ikonos_rawtype senstype=i +
+     mpix=$Ikonos_MPIX mpixf=$Ikonos_MPIXF +
+     maptype=$Ikonos_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $outrpc +
+     $refimg +
+     $tiePoints +
+     usermapref=\"${Ikonos_referenceProjection}\" +
+     interp=$Ikonos_resampleMethod +
+     rastype=$Ikonos_rasterType +
+     siteref=\"${Ikonos_siteref}\" +
+     siteout=\"${Ikonos_siteout}\" +
+     $aoiLimits
+     
+end-proc

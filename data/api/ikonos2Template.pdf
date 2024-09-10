@@ -1,0 +1,19 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+ikqbwarpad2 key=$SESSION_ID +
+     rawimg=$Ikonos2_sourceFile +
+     fnamein=$Ikonos2_previousCoregImage +
+     outimg=$Ikonos2_outimg +
+     senstype=i rawtype=$Ikonos2_rawtype +
+     rawmeta="" rawhdr=""
+     
+end-proc

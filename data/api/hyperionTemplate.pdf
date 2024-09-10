@@ -1,0 +1,31 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+hycall2 key=$SESSION_ID +
+     rawl1r=$Hyperion_sourceFile +
+     rawacs=$Hyperion_metadataFile +
+     outimg=$Hyperion_outimg +
+     nah=$Hyperion_NAH nav=$Hyperion_NAV rtype=$RTYPE +
+     dted=$Hyperion_coregElevInputImage +
+     lsat=$Hyperion_coregBaseInputImage +
+     maptype=$Hyperion_maptype +
+     fftinit=$Hyperion_fftSize + 
+     xvdonly=$XVDOnlyFlag +
+     $refimg +
+     $tiePoints +
+     usermapref=\"${Hyperion_referenceProjection}\" +
+     interp=$Hyperion_resampleMethod +
+     rastype=$Hyperion_rasterType +
+     siteref=\"${Hyperion_siteref}\" +
+     siteout=\"${Hyperion_siteout}\" +
+     $aoiLimits
+
+end-proc

@@ -1,0 +1,16 @@
+procedure
+
+body
+
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+cibcut path="${CIB5_DISKIMG_DIR}/" cibtab="cib05_db.int" +
+   pathalt="" cibtabalt="" +
+   quad=($AOI_MIN_LON,$AOI_MAX_LAT,$AOI_MAX_LON,$AOI_MIN_LAT) +
+   out="$AFIDSWCIBDB_OUT_IMAGE_NAME" pstring="xxxtst" xvd=n partial=10.0
+
+end-proc

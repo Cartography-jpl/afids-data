@@ -1,0 +1,20 @@
+This is a GDAL alternative for Mars projection. From:
+https://alfiahrizky.com/2018/03/10/how-to-gdal-with-martian-data/
+
+Generally, we can have MOLA Sphere (a,b,c=3396000)
+or areoid (a,b=3396190 c=3376200). For the projection, we can have
+latlon, equirectangular, sinusoidal, or stereographic.
+
+Create a new textfile (in Notepad, gedit, vi, or Atom), write the proj4,
+save it under name you easily remember (remember, no space!)
+such as MarsSouthStereo, MarsEQC, MarsMOLAEQC, etc.
+
+Some examples:
+
+Equirectangular areoid projection, centered in Lat=0 and Lon=0
+
+    +proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +a=3396190 +b=3396190 +units=m +no_defs
+
+LatLon projection, MOLA sphere
+
+    +proj=longlat +a=3396000 +b=3396000 +no_defs

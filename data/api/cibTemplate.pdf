@@ -1,0 +1,17 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+cibmos qlon=($AOI_MIN_LON,$AOI_MAX_LON) qlat=($AOI_MIN_LAT,$AOI_MAX_LAT) +
+    out="$OUT_IMAGE_NAME" +
+    diskimg="$DISKIMG_DIR" +
+    res="$cibRes"
+
+end-proc

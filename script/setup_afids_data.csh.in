@@ -1,0 +1,14 @@
+if(! $?AFIDSDATATOP) then
+    setenv AFIDSDATATOP @prefix@/data
+endif
+setenv AFIDS_DATA ${AFIDSDATATOP}
+setenv LANDSAT_ROOT ${AFIDS_DATA}/landsat 
+setenv ELEV_ROOT ${AFIDS_DATA}/srtmL2_filled 
+setenv CIB1_ROOT ${AFIDS_DATA}/cib1 
+setenv CIB5_ROOT ${AFIDS_DATA}/cib5 
+setenv SPICEDATA ${AFIDS_DATA}/cspice 
+setenv MARS_KERNEL ${AFIDS_DATA}/mars_kernel
+setenv AFIDS_VDEV_DATA ${AFIDS_DATA}/vdev
+setenv AFIDS_PLANET_DEM ${AFIDS_DATA}/pommosdata/planet_dem
+setenv AFIDS_PROJDEF ${AFIDS_DATA}/pommosdata/projdef
+setenv POMM_TESTCASE ${AFIDS_DATA}/pommosdata/testcases

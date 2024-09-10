@@ -1,0 +1,23 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+modwarpad2 key=$SESSION_ID +
+   rawimg1=$Modis2_sourceFile +
+   rawgeo1=$Modis2_metadataFile +
+   $rawimg2 +
+   $rawgeo2 +
+   fnamein=$Modis2_previousCoregImage +
+   outimg=$Modis2_outimg +
+   band=$Modis_band rdtype=$Modis2_time
+
+end-proc
+
+

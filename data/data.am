@@ -1,0 +1,214 @@
+dataapi_DATA = $(srcdir)/$(dataapi)/*
+EXTRA_DIST+= $(dataapi_DATA)
+datajoe_DATA = @datajoe@/jmacsrc @datajoe@/joerc @datajoe@/jpicorc 
+datajoe_DATA+= @datajoe@/jstarrc @datajoe@/rjoerc
+EXTRA_DIST+= $(datajoe_DATA)
+datajoesyntax_DATA = $(srcdir)/$(datajoesyntax)/*
+EXTRA_DIST+= $(datajoesyntax_DATA)
+datavextract_DATA= $(srcdir)/$(datavextract)/acfta.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/acfta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/acftb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/aci35a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/aimida.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/aimida.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/aimidb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/bandsa0.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/bandsa1.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/blocka.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/blocka.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/clctna.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/clctnb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/csd31a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/decima.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/erdasm.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/esd001.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/exopta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/explta.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/explta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/expltb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/harris1.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/i2mapd.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/ichipa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/ichipb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/imblka.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/imblkb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/imgdta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/imghdr21.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/ims00a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/jitcid.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/main20.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/main21.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/men35a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mensra.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mensra.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mensrb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mod26a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpd03a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpd03b.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpd26a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpdeoa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpdsra.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mpdsra.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mstgta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mtirpa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/mtirpb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/objcta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/pat35a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/patcha.0.9a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/patcha.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/patchb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaeqa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaeva.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaimb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaimc.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piapea.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piapeb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaprc.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piaprd.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piatga.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/piatgb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/pltfma.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/radsda.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/reflna.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/rlinea.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/rpc00a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/rpc00b.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/rpos0a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/sectga.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/sensra.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/snsra.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/stdida.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/stdidb.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/stdidc.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/steroa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/sterob.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/streoa.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/streob.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/trgta.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/use00a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/use03a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/use03b.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/use26a.dff
+if WITH_AFIDS_A
+datavextract_DATA+= $(srcdir)/$(datavextract)/amt00a.dff
+datavextract_DATA+= $(srcdir)/$(datavextract)/amt00a.pff
+endif
+datapommosprojdef_DATA= $(srcdir)/$(datapommosprojdef)/earth_equidistant.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_geographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_latlon.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_north_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_proj_equidistant.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_proj_latlon.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_proj_northpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_proj_sinusoidal.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_proj_southpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_sinusoidal.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/earth_south_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/go_make_files.pdf
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_equidistant.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_geographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_north_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_proj_equidistant.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_proj_latlon.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_proj_northpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_proj_sinusoidal.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_proj_southpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_sinusoidal.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/luna_south_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/make_cimage_proj_files.pdf
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_equidistant.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_geographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_north_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_proj_equidistant.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_proj_latlon.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_proj_northpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_proj_sinusoidal.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_proj_southpole_stereographic.vic
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_sinusoidal.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/mars_south_pole_stereographic.prj
+datapommosprojdef_DATA+= $(srcdir)/$(datapommosprojdef)/NOTES_for_Mars_Projections.txt
+EXTRA_DIST+= $(datavextract_DATA)
+EXTRA_DIST+= $(datapommosprojdef_DATA)
+# Include in tar file even if we aren't installing this
+EXTRA_DIST+= $(srcdir)/$(datavextract)/amt00a.dff
+EXTRA_DIST+= $(srcdir)/$(datavextract)/amt00a.pff
+
+datavdev_DATA = @datavdev@/EGM96_20_x100.HLF @datavdev@/etop02nobath.hlf 
+datavdev_DATA+= @datavdev@/etop02nbelps.hlf
+datavdev_DATA+= @datavdev@/world_30as_lwm.img
+datavdev_DATA+= @datavdev@/target_bm.img
+datavdev_DATA+= @datavdev@/af1a_bk.int
+datavdev_DATA+= @datavdev@/chaman1b_bk.int
+datavdev_DATA+= @datavdev@/portgaston_bk.int
+EXTRA_DIST+= @datavdev@/af1a_bk.int @datavdev@/chaman1b_bk.int
+EXTRA_DIST+= @datavdev@/portgaston_bk.int
+EXTRA_DIST+= @datavdev@/EGM96_20_x100.HLF.gz
+EXTRA_DIST+= @datavdev@/etop02nbelps.hlf.gz
+EXTRA_DIST+= @datavdev@/etop02nobath.hlf.gz
+EXTRA_DIST+= @datavdev@/target_bm.img.gz
+EXTRA_DIST+= @datavdev@/world_30as_lwm.img.gz
+
+# **IMPORTANT**
+# If you update the version of kernels here, make sure to also update
+# the file geocal.ker that points to the kernels. If you only add updated
+# files, they won't be used unless geocal.ker is also updated.
+datacspice_DATA = @datacspice@/README
+datacspice_DATA += @datacspice@/geocal.ker
+datacspicespk_DATA = @datacspice@/de432s.bsp
+datacspicepck_DATA = @datacspice@/geophysical.ker
+datacspicelsk_DATA = @datacspice@/naif0012.tls
+datacspicepck_DATA += @datacspice@/pck00010.tpc
+datacspicepck_DATA += @datacspice@/earth_720101_070426.bpc
+datacspicepck_DATA += @datacspice@/earth_latest_high_prec.bpc
+datacspicepck_DATA += @datacspice@/earth_070425_370426_predict.bpc
+datacspicefk_DATA = @datacspice@/earth_assoc_itrf93.tf
+datacspicefk_DATA += @datacspice@/eci_tod.tf
+EXTRA_DIST+= $(datacspice_DATA) $(datacspicespk_DATA) $(datacspicepck_DATA)
+EXTRA_DIST+= $(datacspicelsk_DATA) $(datacspicefk_DATA)
+datagenealg_DATA  = @datagenealg@/mat1.int
+#datagenealg_DATA += @datagenealg@/mat2.int
+datagenealg_DATA += @datagenealg@/mat3.int
+datagenealg_DATA += @datagenealg@/mat4.int
+datagenealg_DATA += @datagenealg@/mat5.int
+datagenealg_DATA += @datagenealg@/mat6.int
+#datagenealg_DATA += @datagenealg@/mat7.int
+#datagenealg_DATA += @datagenealg@/mat8.int
+datagenealg_DATA += @datagenealg@/mat9.int
+datagenealg_DATA += @datagenealg@/mat10.int
+datagenealg_DATA += @datagenealg@/mat11.int
+datagenealg_DATA += @datagenealg@/materialofinterest3.ibis
+EXTRA_DIST+= $(datagenealg_DATA)
+
+%: %.gz
+	$(MKDIR_P) $(dir $@)
+	gunzip -c $< > $@
+
+# Create links. This won't be right on other systems, perhaps we can
+# come up with a better solution.
+INSTALL_DATA_HOOK+= link_data
+
+link_data:
+	-$(LN_S) $(cib01dir) $(DESTDIR)$(prefix)/data/cib1
+	-$(LN_S) $(cib05dir) $(DESTDIR)$(prefix)/data/cib5
+	-$(LN_S) $(landsatdir) $(DESTDIR)$(prefix)/data/landsat
+	-$(LN_S) $(srtml2dir) $(DESTDIR)$(prefix)/data/srtmL2_filled
+	-$(LN_S) $(mars_kerneldir) $(DESTDIR)$(prefix)/data/mars_kernel
+	-$(LN_S) $(srtml1dir) $(DESTDIR)$(prefix)/data/srtmL1_filled
+	-$(LN_S) $(adrgdir) $(DESTDIR)$(prefix)/data/adrg
+	-$(LN_S) $(vmap1dir) $(DESTDIR)$(prefix)/data/vmap1
+	-$(LN_S) $(nevadadir)/nevada_doq.img $(DESTDIR)$(prefix)/data/vdev/port_gaston_doq.img
+	-$(LN_S) $(nevadadir)/nevada_elv.hlf $(DESTDIR)$(prefix)/data/vdev/port_gaston_elv.hlf
+	-$(LN_S) ./naif0012.tls $(DESTDIR)$(prefix)/data/cspice/lsk/latest_leapseconds.tls
+	-$(LN_S) $(pommos_planetdemdir) $(DESTDIR)$(prefix)/data/pommosdata/planet_dem
+	-$(LN_S) $(pommos_testcasesdir) $(DESTDIR)$(prefix)/data/pommosdata/testcases
+
+CLEAN_HOOK+= clean_data_unzipped_files
+
+clean_data_unzipped_files:
+	-rm -f $(datavdev)/EGM96_20_x100.HLF
+	-rm -f $(datavdev)/etop02nbelps.hlf
+	-rm -f $(datavdev)/etop02nobath.hlf
+	-rm -f $(datavdev)/target_bm.img
+	-rm -f $(datavdev)/world_30as_lwm.img
+
+

@@ -1,0 +1,20 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+subset_landsat slat=$AOI_MIN_LAT +
+           slon=$AOI_MIN_LON +
+           elat=$AOI_MAX_LAT +
+           elon=$AOI_MAX_LON +
+           dir1="${DISKIMG_DIR}/" +
+           outn="$outName" +
+           dir2="$outDir"
+
+end-proc

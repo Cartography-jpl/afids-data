@@ -1,0 +1,32 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+alicall2 key=$SESSION_ID +
+     rawpre=$ALI_sourceFile_prefix +
+     rawacs=$ALI_metadataFile +
+     regband=$ALI_sensor +
+     outimg=$ALI_outimg +
+     nah=$ALI_NAH nav=$ALI_NAV rtype=$RTYPE +
+     dted=$ALI_coregElevInputImage +
+     lsat=$ALI_coregBaseInputImage +
+     maptype=$ALI_maptype +
+     fftinit=$ALI_fftSize + 
+     xvdonly=$XVDOnlyFlag +
+     $refimg +
+     $tiePoints +
+     usermapref=\"${ALI_referenceProjection}\" +
+     interp=$ALI_resampleMethod +
+     rastype=$ALI_rasterType +
+     siteref=\"${ALI_siteref}\" +
+     siteout=\"${ALI_siteout}\" +
+     $aoiLimits
+
+end-proc

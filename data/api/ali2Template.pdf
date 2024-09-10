@@ -1,0 +1,21 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+aliwarpad2 key=$SESSION_ID +
+     rawpre=$ALI2_sourceFile_prefix +
+     fnamein=$ALI2_previousCoregImage +
+     outimg=$ALI2_outimg +
+     band=$aliStartBand nband=$ALI_nband +
+     rawacs=""
+
+end-proc
+
+

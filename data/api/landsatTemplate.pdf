@@ -1,0 +1,17 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+! file1 ... met1 ...
+lsatgmos out="$OUT_IMAGE_NAME" numfile=$numfile +
+    $imageFileParms +
+    $metaFileParms
+
+end-proc

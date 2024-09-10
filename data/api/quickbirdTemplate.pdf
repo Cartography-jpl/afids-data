@@ -1,0 +1,34 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+ikqbcall2 key=$SESSION_ID +
+     rawimg=$Quickbird_sourceFile +
+     rawmeta="${Quickbird_metadataFile}" +
+     rawhdr="" +
+     outimg=$Quickbird_outimg +
+     nah=$Quickbird_NAH nav=$Quickbird_NAV rtype=$RTYPE +
+     dted="${Quickbird_coregElevInputImage}" +
+     base=${coregBaseInputImage} rawtype=$Quickbird_rawtype senstype=q +
+     mpix=$Quickbird_MPIX mpixf=$Quickbird_MPIXF +
+     maptype=$Quickbird_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $outrpc +
+     $refimg +
+     $bfes +
+     $tiePoints +
+     usermapref=\"${Quickbird_referenceProjection}\" +
+     interp=$Quickbird_resampleMethod +
+     rastype=$Quickbird_rasterType +
+     siteref=\"${Quickbird_siteref}\" +
+     siteout=\"${Quickbird_siteout}\" +
+     $aoiLimits
+
+end-proc

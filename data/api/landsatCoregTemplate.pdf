@@ -1,0 +1,30 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+lscall2 key=$SESSION_ID +
+     rawimg=$Landsat_sourceFile +
+     rawmeta=$Landsat_metadataFile +
+     outimg=$Landsat_outimg +
+     nah=$Landsat_NAH nav=$Landsat_NAV rtype=$RTYPE +
+     dted=$Landsat_coregElevInputImage +
+     base=$Landsat_coregBaseInputImage +
+     maptype=$Landsat_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $refimg +
+     usermapref=\"${Landsat_referenceProjection}\" +
+     interp=$Landsat_resampleMethod +
+     rastype=$Landsat_rasterType +
+     $baseForMaster +
+     siteref=\"${Landsat_siteref}\" +
+     siteout=\"${Landsat_siteout}\" +
+     $aoiLimits
+
+end-proc

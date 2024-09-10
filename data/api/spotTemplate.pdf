@@ -1,0 +1,35 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+ikqbcall2 key=$SESSION_ID +
+     rawimg=$SPOT_sourceFile +
+     rawmeta="" +
+     rawtype="dimap" +
+     rawhdr="" +
+     outimg=$SPOT_outimg +
+     nah=$SPOT_NAH nav=$SPOT_NAV rtype=$RTYPE +
+     dted="${SPOT_coregElevInputImage}" +
+     base=${coregBaseInputImage} senstype=s +
+     mpix=$SPOT_MPIX mpixf=$SPOT_MPIXF +
+     maptype=$SPOT_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $outrpc +
+     $refimg +
+     $bfes +
+     $tiePoints +
+     usermapref="${SPOT_referenceProjection}" +
+     interp=$SPOT_resampleMethod +
+     rastype=$SPOT_rasterType +
+     siteref="${SPOT_siteref}" +
+     siteout="${SPOT_siteout}" +
+     $aoiLimits
+
+end-proc

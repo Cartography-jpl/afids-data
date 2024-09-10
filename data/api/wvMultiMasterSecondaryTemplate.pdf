@@ -1,0 +1,10 @@
+ikqbcall2 key=xxx +
+     rawimg=$rawimg +
+     outimg=$outimg +
+     $refimg +
+     nah=$nah nav=$nav rtype=$rtype +
+     senstype=q +
+     mpix=$mpix +
+     maptype=pc +
+     rastype=area +
+     line_upper="" line_lower="" samp_left="" samp_right=""

@@ -1,0 +1,24 @@
+ikqbcall2 key=$SESSION_ID +
+     rawimg=$SPOT_sourceFile +
+     rawmeta="" +
+     rawtype="dimap" +
+     rawhdr="" +
+     outimg=$outimg +
+     rawband=$rawband +
+     $magfac +
+     nah=$SPOT_NAH nav=$SPOT_NAV rtype=$RTYPE +
+     dted="${SPOT_coregElevInputImage}" +
+     base=${coregBaseInputImage} senstype=s +
+     mpix=$SPOT_MPIX mpixf=$SPOT_MPIXF +
+     maptype=$SPOT_maptype +
+     xvdonly=$XVDOnlyFlag +
+     $outrpc +
+     $refimg +
+     $bfes +
+     $tiePoints +
+     usermapref="${SPOT_referenceProjection}" +
+     interp=$SPOT_resampleMethod +
+     rastype=$SPOT_rasterType +
+     siteref="${SPOT_siteref}" +
+     siteout="${SPOT_siteout}" +
+     $aoiLimits

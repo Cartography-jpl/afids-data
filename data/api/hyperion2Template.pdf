@@ -1,0 +1,21 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+hywarpad2 key=$SESSION_ID +
+     rawimg=$Hyperion2_sourceFile +
+     fnamein=$Hyperion2_previousCoregImage +
+     outimg=$Hyperion2_outimg +
+     band=$Hyperion_band nband=$Hyperion_nband +
+     rawiml1r="" rawacs=""
+
+end-proc
+
+

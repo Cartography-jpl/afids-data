@@ -1,0 +1,24 @@
+procedure
+body
+
+goto start
+!Mars
+make_cimage_proj_files  mars_geographic.prj  mars_proj_latlon.vic
+make_cimage_proj_files  mars_equidistant.prj mars_proj_equidistant.vic
+make_cimage_proj_files  mars_sinusoidal.prj  mars_proj_sinusoidal.vic
+make_cimage_proj_files  mars_north_pole_stereographic.prj mars_proj_northpole_stereographic.vic
+make_cimage_proj_files  mars_south_pole_stereographic.prj mars_proj_southpole_stereographic.vic
+!Luna/Moon
+make_cimage_proj_files  luna_geographic.prj  luna_proj_latlon.vic
+make_cimage_proj_files  luna_equidistant.prj luna_proj_equidistant.vic
+make_cimage_proj_files  luna_sinusoidal.prj  luna_proj_sinusoidal.vic
+make_cimage_proj_files  luna_north_pole_stereographic.prj luna_proj_northpole_stereographic.vic
+make_cimage_proj_files  luna_south_pole_stereographic.prj luna_proj_southpole_stereographic.vic
+!Earth
+start>
+make_cimage_proj_files  earth_geographic.prj earth_proj_latlon.vic
+make_cimage_proj_files  earth_equidistant.prj earth_proj_equidistant.vic
+make_cimage_proj_files  earth_sinusoidal.prj earth_proj_sinusoidal.vic
+make_cimage_proj_files  earth_north_pole_stereographic.prj earth_proj_northpole_stereographic.vic
+make_cimage_proj_files  earth_south_pole_stereographic.prj earth_proj_southpole_stereographic.vic
+end-proc

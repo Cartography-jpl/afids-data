@@ -1,0 +1,13 @@
+if BUILD_AFIDS_DATA
+afidsdata_DATA = @srcdatascript@/setup_afids_data.csh 
+afidsdata_DATA+= @srcdatascript@/setup_afids_data.sh
+afidsdata_SCRIPTS = @srcdatascript@/update_spice.sh
+include afids_data/data/data.am
+endif
+
+# Remove file configure makes to figure out SPICE kernel path.
+DISTCLEAN_HOOK += distclean_spice
+
+distclean_spice:
+	-rm -f spicedatapath.txt
+

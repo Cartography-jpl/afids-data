@@ -1,0 +1,17 @@
+procedure
+
+body
+
+!setlib-add library=($VDEV_DIR,\$R2LIB)
+setlib-add library=(\$R2LIB)
+local afidsroot type=(string,128)
+translog AFIDS_ROOT afidsroot
+setlib-delete library=(\$R2LIB)
+setlib-add library=(&afidsroot/vdev,\$R2LIB)
+
+lswarpad2 key=$SESSION_ID +
+   rawimg=$Landsat2_sourceFile +
+   fnamein=$Landsat2_previousCoregImage +
+   outimg=$Landsat2_outimg
+
+end-proc
